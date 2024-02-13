@@ -1,0 +1,81 @@
+/* Default styles */
+body {
+    font-family: 'Akilvan', sans-serif;                                 
+}
+
+.envelope-container {
+    position: relative;
+    display: inline-block;
+    text-align: center; /* Center the content within the container */
+    margin-top: 100px;
+}
+
+/* Styles for the envelope images */
+.envelope-img {
+    max-width: 50%; /* Ensure the images don't exceed their container's width */
+    display: block; /* Ensure each image is displayed as a block element */
+    margin: 0 auto; /* Center the images horizontally within the container */
+}
+
+/* Heart button styles */
+.heart-btn {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#letter {
+    display: none;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent; /* Set background color to transparent */
+    padding: 30px;
+}
+
+#response {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 600px) {
+    .envelope-img {
+        max-width: 50%; /* Adjust envelope image size for smaller screens */
+    }
+
+    .heart-btn {
+        top: 60%; /* Adjust heart button position for smaller screens */
+    }
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(100%);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+    100% {
+        transform: translateY(calc(-100% - 500px)); /* Adjust 100px to match the height of the letter */
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    bottom: 0; /* Start hearts from the bottom */
+    animation: float-up 3s ease-in-out forwards;
+}
+
+
+
+
+
